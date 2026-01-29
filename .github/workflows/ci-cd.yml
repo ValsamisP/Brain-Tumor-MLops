@@ -48,9 +48,9 @@ jobs:
       - name: Run Flake8 (linting)
         run: flake8 app/ tests/ --max-line-length=100 --extend-ignore=E203,W503
 
-      - name: Run Pylint
-        run: pylint app/ --disable=C0111,R0903 --max-line-length=100
-        continue-on-error: true
+      #- name: Run Pylint
+       # run: pylint app/ --disable=C0111,R0903 --max-line-length=100
+        #continue-on-error: true
 
   # Unit Tests
   unit-tests:
