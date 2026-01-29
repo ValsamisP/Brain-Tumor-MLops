@@ -2,7 +2,6 @@
 Unit tests for Brain Tumor Classification API
 """
 import io
-
 import pytest
 from fastapi.testclient import TestClient
 from PIL import Image
@@ -19,7 +18,8 @@ class TestHealthEndpoints:
         """Test root endpoint"""
         response = client.get("/")
         assert response.status_code == 200
-        assert "message" in response.json()
+        assert response.headers["content-type"].startswith("text/html")
+        assert b"Brain Tumor Classification" in response.content
         assert response.json()["version"] == "1.0.0"
 
     def test_health_check(self):
