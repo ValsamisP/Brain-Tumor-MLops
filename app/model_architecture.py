@@ -14,7 +14,6 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 
-
 # Export for use in other modules
 BrainTumorCNN = Enhanced_CNN2D1D
 
