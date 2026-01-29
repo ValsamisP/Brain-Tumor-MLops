@@ -1,4 +1,4 @@
-  name: Brain Tumor MLOps CI/CD
+name: Brain Tumor MLOps CI/CD
 
 on:
   push:
