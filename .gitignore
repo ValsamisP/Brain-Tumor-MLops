@@ -65,9 +65,6 @@ data/processed/*
 *.hdf5
 
 # Models (keep directory structure)
-models/*.pth
-models/*.pt
-models/*.ckpt
 !models/.gitkeep
 
 # MLflow
