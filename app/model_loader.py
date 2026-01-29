@@ -27,7 +27,6 @@ class ModelLoader:
 
             # If not set relative path (this is working locally)
             if not self.model_path:
-
                 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
                 self.model_path = str(base_path / "models" / "best_model_pth")
         self.model = None

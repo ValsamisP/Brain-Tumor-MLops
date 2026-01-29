@@ -4,9 +4,6 @@ Validates model performance metrics before deployment
 """
 import os
 import json
-import torch
-import numpy as np
-from pathlib import Path
 import sys
 
 # Thresholds for model validation
