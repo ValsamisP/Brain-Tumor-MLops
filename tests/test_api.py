@@ -2,6 +2,7 @@
 Unit tests for Brain Tumor Classification API
 """
 import io
+
 import pytest
 from fastapi.testclient import TestClient
 from PIL import Image
