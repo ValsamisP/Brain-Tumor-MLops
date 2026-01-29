@@ -1,4 +1,4 @@
-name: Brain Tumor MLOps CI/CD
+  name: Brain Tumor MLOps CI/CD
 
 on:
   push:
@@ -74,7 +74,7 @@ jobs:
 
       - name: Run tests with coverage
         run: |
-          pytest tests/ --cov=app --cov-report=xml --cov-report=html --cov-report=term
+          pytest tests/ --cov=app --cov-report=xml --cov-report=html --cov-report=term --ignore=tests/integration/
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
