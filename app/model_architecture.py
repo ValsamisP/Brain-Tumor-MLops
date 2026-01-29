@@ -2,14 +2,17 @@
 Brain Tumor CNN Model Architecture
 Enhanced 2D+1D CNN with Transfer Learning and Attention
 """
+import os
 import sys
-from pathlib import Path
 
-# Import the actual model
-from models.cnn import ChannelAttention, Enhanced_CNN2D1D, SpatialAttention
+# Now import from src.models.cnn
+from src.models.cnn import ChannelAttention, Enhanced_CNN2D1D, SpatialAttention
 
-# Add src to path so we can import the model
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
+# Add project root to Python path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
 
 
 # Export for use in other modules
