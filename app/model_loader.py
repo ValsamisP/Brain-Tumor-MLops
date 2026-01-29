@@ -28,7 +28,7 @@ class ModelLoader:
             # If not set relative path (this is working locally)
             if not self.model_path:
                 base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-                self.model_path = str(base_path / "models" / "best_model_pth")
+                self.model_path = os.path.join(base_path, "models", "best_model.pth")
         self.model = None
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.class_names = ["glioma", "meningioma", "no_tumor", "pituitary"]
