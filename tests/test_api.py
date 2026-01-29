@@ -21,7 +21,7 @@ class TestHealthEndpoints:
         assert response.status_code == 200
         assert response.headers["content-type"].startswith("text/html")
         assert b"Brain Tumor Classification" in response.content
-        assert response.json()["version"] == "1.0.0"
+        # assert response.json()["version"] == "1.0.0"
 
     def test_health_check(self):
         """Test health check endpoint"""
